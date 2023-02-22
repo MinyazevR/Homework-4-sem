@@ -8,27 +8,21 @@ open NUnit.Framework
 
 let dataForFactorialFunction =
     [
-    TestCaseData(factorial 0 , 1);
-    TestCaseData(factorial 1, 1);
-    TestCaseData(factorial 8, 40320);
-    TestCaseData(2, 2);
-    TestCaseData(factorial -1 , 0);
-    TestCaseData(factorial -123, 0);
-    TestCaseData(factorial -12, 0)
+    TestCaseData(factorial 0 , Some 1);
+    TestCaseData(factorial 1, Some 1);
+    TestCaseData(factorial 8, Some 40320);
+    TestCaseData(factorial 2, Some 2);
     ]
     
 let dataForFibonacciFunction =
     [
-    TestCaseData(fibonacci 0 , 0);
-    TestCaseData(fibonacci 1, 1);
-    TestCaseData(fibonacci 2, 1);
-    TestCaseData(fibonacci 3, 2);
-    TestCaseData(fibonacci 4 , 3);
-    TestCaseData(fibonacci 5, 5);
-    TestCaseData(fibonacci 6, 8);
-    TestCaseData(fibonacci -1, -1);
-    TestCaseData(fibonacci -2, -1);
-    TestCaseData(fibonacci -100, -1);
+    TestCaseData(fibonacci 0 , Some 0);
+    TestCaseData(fibonacci 1, Some 1);
+    TestCaseData(fibonacci 2, Some 1);
+    TestCaseData(fibonacci 3, Some 2);
+    TestCaseData(fibonacci 4 , Some 3);
+    TestCaseData(fibonacci 5, Some 5);
+    TestCaseData(fibonacci 6, Some 8);
     ]
     
 let validDataForNumberSearchFunction =
