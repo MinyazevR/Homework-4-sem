@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>Homework_1</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile></DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile></DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Factorial.fs" />
+        <Compile Include="Fibonacci.fs" />
+        <Compile Include="ReverseList.fs" />
+        <Compile Include="NumberSearch.fs" />
+        <Compile Include="SeriesOfDegree.fs" />
+    </ItemGroup>
+
+</Project>
