@@ -73,7 +73,7 @@ let subtractionTree = Tree(Operations.Subtraction, Tip 10.0, Tip 20.0)
 let divisionTree = Tree(Operations.Division, Tip 10.0, Tip 20.0)
 let multiplicationTree = Tree(Operations.Multiplication, Tip 10.0, Tip 8.0)
 let exponentiationTree = Tree(Operations.Exponentiation, Tip 2, Tip 3)
-let firstParseTree = Tree(Operations.Addition, additionTree, divisionTree)
+let firstParseTree = Tree(Operations.Addition, additionTree, subtractionTree)
 
 let secondParseTree =
     Tree(Operations.Division, multiplicationTree, exponentiationTree)
@@ -90,5 +90,6 @@ let parseTreeCaseData =
 
 [<TestCaseSource(nameof numberOfEvenNumbersCaseData);
   TestCaseSource(nameof treeMapCaseData);
-  TestCaseSource(nameof primeGeneratorCaseData)>]
+  TestCaseSource(nameof primeGeneratorCaseData);
+  TestCaseSource(nameof parseTreeCaseData)>]
 let functionShouldReturnRightValue x y = x |> should equal y
