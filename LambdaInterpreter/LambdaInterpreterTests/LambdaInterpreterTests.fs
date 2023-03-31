@@ -6,7 +6,7 @@ open LambdaInterpreter
 
 // (λx.y) ((λx. x x x) (λx. x x x)) -> y
 [<Test>]
-let first_example () =
+let first_test () =
     let answer =
         beta_reduce (
             Application(
@@ -22,7 +22,7 @@ let first_example () =
 
 // (λx.x) (λx. x) -> (λx. x)
 [<Test>]
-let second_example () =
+let second_test () =
     let answer =
         beta_reduce (Application(Abstraction("x", Variable "x"), Abstraction("x", Variable "x")))
 
@@ -30,8 +30,17 @@ let second_example () =
 
 // (λx.λy.x)(λx.x) → λy.(λx.x)
 [<Test>]
-let third_example () =
+let third_test () =
     let answer =
         beta_reduce (Application(Abstraction("x", Abstraction("y", Variable "x")), Abstraction("x", Variable "x")))
 
     answer |> should equal (Abstraction("y", Abstraction("x", Variable "x")))
+
+// λx.x → λx.x
+[<Test>]
+let fourth_test () =
+    let answer =
+        beta_reduce (Abstraction("x", Variable "x"))
+
+    answer |> should equal (Abstraction("x", Variable "x"))
+    
