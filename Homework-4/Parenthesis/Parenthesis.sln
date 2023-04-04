@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Parenthesis", "Parenthesis\Parenthesis.fsproj", "{8ABE9AFC-9509-437A-930A-0A08F62BBF6A}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ParenthesisTests", "ParenthesisTests\ParenthesisTests.fsproj", "{3CF16DCD-E98D-46C3-8545-3F1CD2736303}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8ABE9AFC-9509-437A-930A-0A08F62BBF6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ABE9AFC-9509-437A-930A-0A08F62BBF6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ABE9AFC-9509-437A-930A-0A08F62BBF6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ABE9AFC-9509-437A-930A-0A08F62BBF6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF16DCD-E98D-46C3-8545-3F1CD2736303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF16DCD-E98D-46C3-8545-3F1CD2736303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF16DCD-E98D-46C3-8545-3F1CD2736303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF16DCD-E98D-46C3-8545-3F1CD2736303}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
