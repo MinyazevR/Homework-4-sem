@@ -9,6 +9,7 @@
     <ItemGroup>
         <Compile Include="PointFreeTests.fs" />
         <Compile Include="ParenthesisTests.fs" />
+        <Compile Include="TelephoneDirectoryTests.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 
