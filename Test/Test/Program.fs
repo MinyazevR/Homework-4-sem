@@ -1,12 +1,6 @@
 ﻿module Program
 
-let supermap lst f =
-    let rec g f xs= 
-        match xs with  
-        | [] -> []
-        | h::t -> (f h)::g f t
-    g f lst
-        
+let supermap f lst = lst |> List. map f |> List.concat
         
 let rhomb n =
     let rec space p x =
@@ -38,4 +32,3 @@ type ConcurrentStack<'T>() =
                 stack <- tail
                 Some head
             | [] -> None)
-        
