@@ -25,9 +25,9 @@ let Test1 () =
     let virus = Virus(localNet, seq { firstComputer })
     let result = virus.InfectTheComputers()
     let hs = HashSet()
-    hs.Add firstComputer
-    hs.Add secondComputer
-    hs.Add thirdComputer
+    hs.Add firstComputer |> ignore
+    hs.Add secondComputer |> ignore
+    hs.Add thirdComputer |> ignore
     result |> should equal hs
 
 [<Test>]
