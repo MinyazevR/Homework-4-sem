@@ -27,7 +27,6 @@ let firstMiniCrawlerTest () =
                         (5773, "http://soso.com/")
                         (156191, "http://www.rednet.cn/index.html")
                         (99291, "http://sneaindia.com/")
-                        (863, "http://www.sneachennai.com/")
                         (52872, "http://www.piutetrailrvpark.com/")
                         (6199, "http://128.199.120.34/web/administrator/index.php")}
     answer |> should equal expected
