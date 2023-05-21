@@ -18,12 +18,8 @@ let work url =
     let html: (string * string) option = url |> fetchAsync |> Async.RunSynchronously
     let matches = x.Matches(fst html.Value)
 
-    let a =
-        [ for x in matches -> x.Value[8 .. x.Value.Length - 2] |> fetchAsync ]
-        |> Async.Parallel
-        |> Async.RunSynchronously
-
-    Seq.map (fun (t: string * string) -> t |> fst |> String.length, t |> snd) (Seq.choose id a)
+    [ for x in matches -> x.Value[8 .. x.Value.Length - 2] |> fetchAsync ]
+    |> Async.Parallel
 
 let print answer =
     for i, j in answer do
