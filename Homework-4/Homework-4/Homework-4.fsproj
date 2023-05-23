@@ -10,7 +10,12 @@
         <Compile Include="PointFree.fs" />
         <Compile Include="Parenthesis.fs" />
         <Compile Include="TelephoneDirectory.fs" />
+        <Compile Include="TelephoneDirectoryInputOutput.fs" />
         <Compile Include="TelephoneDirectoryProgram.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Argu" Version="6.1.1" />
     </ItemGroup>
 
 </Project>

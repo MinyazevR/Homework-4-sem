@@ -3,7 +3,6 @@
 open Homework_4
 open NUnit.Framework
 open FsUnit
-open Homework_4.Parenthesis
 open TelephoneDirectory
 
 [<Test>]
@@ -35,6 +34,7 @@ let AddIdenticalRecordsTest () =
     |> should equal (Set.ofSeq (seq { ("Махмур", "12345678") }))
 
     let third_directory = second_directory.Add "Махмур" "12345678"
+    (third_directory = second_directory) |> should equal true
 
     third_directory.Entries
     |> should equal (Set.ofSeq (seq { ("Махмур", "12345678") }))
@@ -45,14 +45,14 @@ let SuccessFindPhoneByName () =
     let second_directory = directory.Add "Махмур" "12345678"
 
     second_directory.FindPhoneByName "Махмур"
-    |> should equal (Success(Set.add "12345678" Set.empty))
+    |> should equal (Some(Set.add "12345678" Set.empty))
 
     let third_directory = second_directory.Add "Махмур" "87654321"
 
     third_directory.FindPhoneByName "Махмур"
     |> should
         equal
-        (Success(
+        (Some(
             Set.ofSeq (
                 seq {
                     "12345678"
@@ -67,8 +67,7 @@ let ErrorFindPhoneByName () =
     let directory = TelephoneDirectory()
     let second_directory = directory.Add "Махмур" "12345678"
 
-    second_directory.FindPhoneByName "Махма"
-    |> should equal (Error(Set.add "Name not found" Set.empty))
+    second_directory.FindPhoneByName "Махма" |> should equal None
 
 [<Test>]
 let SuccessFindNameByPhone () =
@@ -76,14 +75,14 @@ let SuccessFindNameByPhone () =
     let second_directory = directory.Add "Махмур" "12345678"
 
     second_directory.FindNameByPhone "12345678"
-    |> should equal (Success(Set.add "Махмур" Set.empty))
+    |> should equal (Some(Set.add "Махмур" Set.empty))
 
     let third_directory = second_directory.Add "Брат махмура" "12345678"
 
     third_directory.FindNameByPhone "12345678"
     |> should
         equal
-        (Success(
+        (Some(
             Set.ofSeq (
                 seq {
                     "Махмур"
@@ -98,5 +97,4 @@ let ErrorFindNameByPhone () =
     let directory = TelephoneDirectory()
     let second_directory = directory.Add "Махмур" "12345678"
 
-    second_directory.FindNameByPhone "12345679"
-    |> should equal (Error(Set.add "Phone not found" Set.empty))
+    second_directory.FindNameByPhone "12345679" |> should equal None
