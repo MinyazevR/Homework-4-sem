@@ -1,0 +1,14 @@
+\documentclass{article}
+\begin{document}
+
+\section{Normalization}
+
+\large$$((\lambda a.(\lambda  b.b\ b)\ (\lambda b.b\ b))\ b)\ ((\lambda c.(c\ b))\ (\lambda a.a)) \rightarrow_\beta
+((\lambda a.(\lambda  b.b\ b)\ (\lambda b.b\ b))\ b)\ ((\lambda a.a)\ b) \rightarrow_\beta$$
+$$((\lambda a.(\lambda  b.b\ b)\ (\lambda b.b\ b))\ b)\ b \rightarrow_\beta
+((\lambda  b.b\ b)\ (\lambda b.b\ b))\ b$$
+
+\section{$S\ S\ K = I$}
+$$S\ K\ K\ x =  (\lambda x\ y\ z.x\ z\ (y\ z)) (\lambda x\ y.x) (\lambda x\ y.x)\ x = (\lambda x\ y.x)\ x\ (\lambda y.x) = x => S K K = I$$
+
+\end{document}
