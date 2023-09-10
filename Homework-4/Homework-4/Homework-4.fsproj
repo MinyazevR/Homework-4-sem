@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>Homework_4</RootNamespace>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="PointFree.fs" />
+        <Compile Include="Parenthesis.fs" />
+        <Compile Include="TelephoneDirectory.fs" />
+        <Compile Include="TelephoneDirectoryInputOutput.fs" />
+        <Compile Include="TelephoneDirectoryProgram.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Argu" Version="6.1.1" />
+    </ItemGroup>
+
+</Project>
